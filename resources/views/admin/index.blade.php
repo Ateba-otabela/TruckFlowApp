@@ -59,7 +59,7 @@
                     <div class="card dashboard-card text-bg-success">
                         <div class="card-body">
                             <h5 class="card-title">Total Payment</h5>
-                            <p class="card-text fs-4 text-white fw-bold">$totalAmount</p>
+                            <p class="card-text fs-4 text-white fw-bold">${{$totalAmount}}</p>
                         </div>
                     </div>
                 </div>

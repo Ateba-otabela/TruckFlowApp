@@ -12,7 +12,7 @@ class AdminController extends Controller
         $shippments = Shipp::all();
         $totalAmount = Shipp::sum('amount');
 
-        return view('admin.index',compact('shippments'));
+        return view('admin.index',compact('shippments','totalAmount'));
     }
 
     public function shippment(){
