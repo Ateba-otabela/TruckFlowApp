@@ -9,9 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function adminDashboard(){
-        $shippments = Shipp::all();
+        $shippments = Shipp::all()->count();
+        $totalAmount = Shipp::sum('amount');
 
-        return view('admin.index', compact('shippments'));
+        return view('admin.index', compact('shippments','totalAmount'));
     }
 
     public function shippment(){

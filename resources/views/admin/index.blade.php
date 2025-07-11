@@ -58,8 +58,8 @@
                 <div class="col-md-3">
                     <div class="card dashboard-card text-bg-success">
                         <div class="card-body">
-                            <h5 class="card-title">Payment</h5>
-                            <p class="card-text fs-4 text-white fw-bold">$totalpayments</p>
+                            <h5 class="card-title">Total Payment</h5>
+                            <p class="card-text fs-4 text-white fw-bold">${{$totalAmount}}</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     <div class="card dashboard-card text-bg-info">
                         <div class="card-body">
                             <h5 class="card-title text-white">Total Tracking</h5>
-                            <p class="card-text fs-4 text-white fw-bold">$totalProducts</p>
+                                <p class="card-text fs-4 text-white fw-bold">$totalTracking</p>
                         </div>
                     </div>
                 </div>
