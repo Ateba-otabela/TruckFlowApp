@@ -98,10 +98,7 @@
     <div class="mb-3">
       <p class="mb-1 fw-bold">From</p>
       <p class="mb-0"> {{ $shipment->senders_name }}<br>
-      American pallet liquidation<br>
-      American pl Jeffersonville IN<br>
-      252 Jeffersonville<br>
-      JEFFERSONVILLE, IN 47130<br>
+   
       {{ $shipment->company_location }}<br>
       {{ $shipment->code }}<br>
       {{ $shipment->company_email }}</p>
@@ -112,7 +109,7 @@
       <p class="mb-0"> {{ $shipment->receivers_name }}<br>
       {{ $shipment->zip_code }}<br>
       {{ $shipment->receiver_location }}<br>
-      00491783120433<br>
+      
        {{ $shipment->receiver_email }}<br>
       This is a residence</p>
     </div>

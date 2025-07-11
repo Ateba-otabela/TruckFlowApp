@@ -13,7 +13,7 @@
 <form action="{{ route('updatetracking', $shipment->id) }}" method="POST" class="container mt-4">
  @csrf
   <h2 class="mb-3">Sender Information</h2>
-  <div class="row mb-3">
+  <div class="row mb-3" >
     <div class="col-md-6">
       <label class="form-label">Sender's Name</label>
       <input type="text" class="form-control" name="senders_name" required value="{{ old('senders_name', $shipment->senders_name) }}">

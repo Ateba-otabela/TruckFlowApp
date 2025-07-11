@@ -19,15 +19,16 @@ class AdminController extends Controller
     }
 
     public function shipping(Request $request){
+        
      
     Shipp::create([
       
            //shipper informations
       'Tracking_number' => request('trackingNumber'),
-      'senders_name' => 'ateba patrice',
-      'company_location' => '252 American pl jeffersonville Indiana 47130', 
-      'code' => '7207987331',
-      'company_email' => 'Amcliquidators531@gmail.com',
+      'senders_name' => request('senders_name'),
+      'company_location' => request('company_location'), 
+      'code' => request('code'),
+      'company_email' => request('company_email'),
           //Receiver informations
        'receivers_name' => request('receivers_name'),
        'receiver_location' => request('receiver_location'),
@@ -39,7 +40,7 @@ class AdminController extends Controller
         'destination' => request('destination'),
         'carier' => 'Prime_Logistic',
         'type_of_shippment' => request('type_of_shippment'),
-        'weight' => '324',
+        'weight' => request('weight'),
         'shipment_mode' => request('shipment_mode'),
         'carrier_No' => '7207987331',
         'product' => 'product',//product name and quantity
@@ -59,6 +60,7 @@ class AdminController extends Controller
     
 
     ]);
+    dd($request->all());
      return redirect()->back()->with('shipping', 'Your shippment have been place successfully!');
     }
 

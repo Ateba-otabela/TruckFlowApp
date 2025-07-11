@@ -25,6 +25,24 @@
     <div class="row g-3">
       <!-- Receiver Info -->
       <div class="col-md-6">
+        <label for="senders_name" class="form-label">Sender's Name</label>
+        <input type="text" class="form-control" id="senders_name" name="senders_name" >
+      </div>
+   
+       <div class="col-md-6">
+        <label for="code" class="form-label">Code</label>
+        <input type="text" class="form-control" id="code" name="code" >
+      </div>
+       <div class="col-md-6">
+        <label for="company_email" class="form-label">Company email</label>
+        <input type="email" class="form-control" id="company_email" name="company_email" >
+      </div>
+            
+       <div class="col-md-6">
+        <label for="company_location" class="form-label">Company Location</label>
+        <input type="text" class="form-control" id="company_location" name="company_location">
+      </div>
+          <div class="col-md-6">
         <label for="receivers_name" class="form-label">Receiver's Name</label>
         <input type="text" class="form-control" id="receivers_name" name="receivers_name" required >
       </div>
@@ -58,7 +76,10 @@
         <label for="shipment_mode" class="form-label">Shipment Mode</label>
         <input type="text" class="form-control" id="shipment_mode" name="shipment_mode" required>
       </div>
-
+      <div class="col-md-6">
+        <label for="weight" class="form-label">Weight</label>
+        <input type="number" class="form-control" id="weight" name="weight" required>
+      </div>
       <!-- Date & Location Info -->
       <div class="col-md-4">
         <label for="pick_up_date" class="form-label">Pick Up Date</label>
