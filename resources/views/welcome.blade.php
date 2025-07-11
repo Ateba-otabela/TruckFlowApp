@@ -206,19 +206,59 @@
     </div>
  </section>
 
- <h3 class="text-center">OUR IMPACT</h3>
- <h1 class="text-danger text-center">34</h1>
+<h3 class="text-center">OUR IMPACT</h3>
+<h1 class="text-danger text-center count-up" data-count="34">0</h1>
 <h3 class="text-center text-danger">YEARS MOVING PETS</h3>
 <p class="text-center">IPATA Member since 1990</p>
 <hr class="text-danger">
-<h1 class="text-center text-danger">12,500</h1>
+
+<h1 class="text-center text-danger count-up" data-count="12500">0</h1>
 <h3 class="text-center text-danger">PETS MOVED</h3>
 <p class="text-center">Across 155+ destinations</p>
 <hr class="text-danger">
-<h1 class="text-center text-danger">281</h1>
+
+<h1 class="text-center text-danger count-up" data-count="281">0</h1>
 <h3 class="text-center text-danger">GOOGLE REVIEWS</h3>
 <p class="text-center">Average google rating is 4.8</p>
 <hr class="text-danger">
 
+
+  <script>
+  function animateCountUp(el, end, duration = 2000) {
+    let start = 0;
+    let startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      el.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.count-up');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          const end = parseInt(entry.target.getAttribute('data-count'));
+          animateCountUp(entry.target, end);
+          entry.target.classList.add('counted'); // Avoid re-animating
+          observer.unobserve(entry.target); // Stop observing this element
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% visible
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+  });
+
+</script>
  
 </x-app-layout>
