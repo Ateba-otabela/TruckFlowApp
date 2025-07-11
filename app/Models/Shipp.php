@@ -8,6 +8,7 @@ class Shipp extends Model
 {
     protected $fillable = [
         'id',
+        'amount',
         'senders_name',
         'company_location',
         'code',

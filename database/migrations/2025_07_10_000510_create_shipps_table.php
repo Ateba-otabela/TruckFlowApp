@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('senders_name')->nullable();
             $table->string('company_location')->nullable();
             $table->string('code')->nullable();
+            $table->string('amount');
             $table->string('company_email')->nullable();
             $table->string('receivers_name');
             $table->string('receiver_location');

@@ -93,6 +93,10 @@
         <label for="time" class="form-label">Time</label>
         <input type="time" class="form-control" id="time" name="time" required>
       </div>
+       <div class="col-md-4">
+        <label for="amount" class="form-label">Amount</label>
+        <input type="text" class="form-control" id="amount" name="amount" required>
+      </div>
       <div class="col-md-12 d-flex gap-3 justify-content-between">
         <label for="location" class="form-label">Current Location</label>
         <input type="text" class="form-control" id="location" name="location" required>

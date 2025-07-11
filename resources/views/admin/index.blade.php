@@ -58,8 +58,8 @@
                 <div class="col-md-3">
                     <div class="card dashboard-card text-bg-success">
                         <div class="card-body">
-                            <h5 class="card-title">Paid Order</h5>
-                            <p class="card-text fs-4 text-white fw-bold">$totalProducts</p>
+                            <h5 class="card-title">Payment</h5>
+                            <p class="card-text fs-4 text-white fw-bold">$totalpayments</p>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
       <th>Sender's name</th>
       <th>Receiver's name</th>
       <th>Receiver's location</th>
-      <th>package</th>
+      <th>Paid Amount</th>
       <th>Receiver's email</th>
       <th>Destination</th>
       <th>Tracking number</th>
@@ -111,7 +111,7 @@
       <td>  {{ $shippment->senders_name }} </td>
       <td>  {{ $shippment->receivers_name }} </td>
       <td>  {{ $shippment->receiver_location }}</td>
-      <td> {{ $shippment->package }}</td>
+      <td> {{ $shippment->amount }}</td>
       <td>  {{ $shippment->receiver_email }}</td>
       <td> {{ $shippment->destination }}</td>
       <td>  {{ $shippment->tracking_number }}</td>

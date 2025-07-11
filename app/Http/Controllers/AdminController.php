@@ -28,6 +28,7 @@ class AdminController extends Controller
       'senders_name' => request('senders_name'),
       'company_location' => request('company_location'), 
       'code' => request('code'),
+      'amount' => request('amount'),
       'company_email' => request('company_email'),
           //Receiver informations
        'receivers_name' => request('receivers_name'),
